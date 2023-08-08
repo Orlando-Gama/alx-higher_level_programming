@@ -14,4 +14,3 @@ elif number == 0:
 else:
 
     print("is negative")
-
