@@ -1,13 +1,14 @@
+#!/usr/bin/python3
 def no_c(my_string):
-    new_string = ""
-    for char in my_string:
-        if char != 'c' and char != 'C':
-            new_string += char
-    return new_string
+    length = len(my_string)
 
-# Test cases
-if __name__ == "__main__":
-    print(no_c("Best School"))
-    print(no_c("Chicago"))
-    print(no_c("C is fun!"))
+    j = 0
 
+    new_string = my_string[:]
+
+    for i in range(length):
+        if (my_string[i] == 'c' or my_string[i] == 'C'):
+            new_string = new_string[:(i - j)] + my_string[(i + 1):]
+            j += 1
+
+    return (new_string)
